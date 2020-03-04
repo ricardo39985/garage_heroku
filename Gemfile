@@ -14,5 +14,3 @@ gem 'pg', '~> 0.20.0'
   gem 'faker'
 
 
-group :development ,:test do
-end
