@@ -48,6 +48,7 @@ end
   end
 
   patch '/:id/edit' do
+    set_car
     if update_messages
       erb :'car/edit'
     else

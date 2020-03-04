@@ -8,7 +8,7 @@
 <div class="container">
   <div class="">
     <div class="">
-        <h2><%=current_user.username.titleize%>, Welcome to your Garage</h2>
+        <h4><%=current_user.username.titleize%>, Welcome to your Garage</h4>
     </div>
   </div>
 </div>
@@ -30,7 +30,7 @@
             <div class="card blue-grey darken-1 hoverable">
               <div class="card-content white-text">
               <ul>
-              <h2>
+              <h6>
                   <% if car.year %>
                     <%=car.year%>,                  
                   <% end %>
@@ -40,7 +40,7 @@
                   <% if car.model %>
                     <%=car.model%>                  
                   <% end %>
-              </h2>
+              </h6>
               </ul>
               </div>
             </div>
@@ -51,6 +51,6 @@
   </div>
   <% end %>
 </div>
-<div style="height:245px"></div>
+<div style="height:5px"></div>
 
 

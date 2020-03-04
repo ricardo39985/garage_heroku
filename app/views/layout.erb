@@ -17,26 +17,28 @@
 </head>
 <body class = "grey lighten-2">
   <% if session[:user_id] %>
-    
-    <nav class="nav-wrapper blue-grey darken-1">
-      <div class='container'>
-        <a href="/" class="brand-logo">Garage</a>
-          <ul class="right">
-            <li><a id="logout"href="/logout">Log out</a></li>
-            <li><a href="https://github.com/ricardo39985/sinatra-project" target="_blank"><i class="fab fa-github fa-3x"></i></a></li>
+    <div class="row">
+      <nav class=" col s12 m12 nav-wrapper blue-grey darken-1">
+        <div class='container'>
+          <a href="/" class=" left brand-logo">Garage</a>
+            <ul class="right">
+              <li><a id="logout"href="/logout">Log out</a></li>
+              <li><a href="https://github.com/ricardo39985/sinatra-project" target="_blank"><i class="fab fa-github fa-3x"></i></a></li>
 
-          </ul>
-          <ul class="right">
-            <li><a id="create"href="/cars/new">Add a car</a></li>
-          </ul>
-      </div>
-    </nav>
+            </ul>
+            <ul class="right">
+              <li><a id="create"href="/cars/new">Add a car</a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
     <%=yield%>
     
   <% else %>
-      <nav class="nav-wrapper blue-grey darken-1">
+    <div class="row">
+      <nav class="col s12 m12 nav-wrapper blue-grey darken-1">
         <div class="container">
-          <a href="/" class="brand-logo">Garage</a>
+          <a href="/" class=" left brand-logo">Garage</a>
           <ul class="right">
             <li><a id="login" href="/login">Login</a></li>
             <li><a id="sign_up"href="/users/new">Sign Up</a></li>
@@ -45,6 +47,7 @@
         </div>
 
       </nav>
+    </div>
           <%=yield%>
 
     <div id="sign_">
@@ -54,5 +57,8 @@
   <% end %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <footer class= "center">
+        <small><strong>Garage </strong>&copy; Copyright 2020, Ricardo Persaud</small>
+</footer>
   </body>
 </html>
