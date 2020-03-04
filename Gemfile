@@ -10,7 +10,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
-gem 'pg', '~> 0.15'
+gem 'pg', '~> 0.20.0'
   gem 'faker'
 
 

@@ -6,6 +6,9 @@ production:
   database: db/production
 
 development:
+
+  development:
   <<: *default
-  adapter: postgresql
-  database: 'db/development'
+  database: 'cars'
+  username: 'rick'
+  password: 'carsdb'
