@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
           specs: Faker::Vehicle.standard_specs.flatten.to_sentence ,
           mileage:Faker::Vehicle.mileage(min: 50_000, max: 250_000)
         )
-        new_car.model= Faker::Vehicle.model
+        new_car.model= Faker::Vehicle.model(make_of_model: new_car.make)
         new_car.user = @user
         new_car.save
       end      
