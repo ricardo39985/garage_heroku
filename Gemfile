@@ -11,8 +11,8 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'pg', '~> 0.15'
+  gem 'faker'
 
 
 group :development ,:test do
-  gem 'faker'
 end
