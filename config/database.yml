@@ -3,7 +3,7 @@ default: &default
 
 production:
   adapter: postgresql
-  database: db/production
+  database: casr
 
 development:
 
