@@ -6,28 +6,31 @@
         <h1 class="card-title"><%=@car.year%> <%=@car.make%> <%=@car.model%></h1>
         <% if @car.color %>
         <p>
-        Color: <%=@car.color%>
+          <strong>Color: </strong><%=@car.color%><br>
+        
         </p>
         <% end %>
         <% if @car.transmission %>
         <p>
-          Transmission: <%=@car.transmission%>                  
+           <strong>Transmission: </strong> <%=@car.transmission%> <br>
+                         
         </p>
         <% end %>
         <% if @car.options %>
         <p>
-          Options: <%=@car.options%>                
+           <strong>Options: </strong><%=@car.options%> <br><br>
+                          
         
         </p>
         <% end %>
         <% if @car.specs %>
         <p>
-          Specs: <%=@car.specs%>                  
+           <strong>Specs: </strong><%=@car.specs%>     <br>                       
         </p>
         <% end %>
         <% if @car.mileage %>
         <p>
-        Mileage: <%=@car.mileage%>                  
+           <strong>Mileage:</strong> <%=@car.mileage%>    <br>                       
         </p>
         <% end %>
       </div>

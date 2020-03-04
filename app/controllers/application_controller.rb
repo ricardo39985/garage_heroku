@@ -35,8 +35,10 @@ class ApplicationController < Sinatra::Base
 
     def success
       10.times do
+        make_model=Faker::Vehicle.make_and_model.split(" ")
         new_car = Car.new(
-          make: Faker::Vehicle.manufacture,
+          make: make_model[0],
+          model: make_model[1],
           year: Faker::Vehicle.year,
           color: Faker::Vehicle.color ,
           transmission: Faker::Vehicle.transmission ,
@@ -44,7 +46,6 @@ class ApplicationController < Sinatra::Base
           specs: Faker::Vehicle.standard_specs.flatten.to_sentence ,
           mileage:Faker::Vehicle.mileage(min: 50_000, max: 250_000)
         )
-        new_car.model= Faker::Vehicle.model(make_of_model: new_car.make)
         new_car.user = @user
         new_car.save
       end      
